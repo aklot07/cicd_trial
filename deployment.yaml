@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: sboot
+  name: sboot
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sboot
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: sboot
+    spec:
+      containers:
+      - image: aklot07/sboot:1.0
+        name: sboot
+        ports:
+        - containerPort: 8091
+        resources: {}
+status: {}
