@@ -40,6 +40,6 @@ spec:
     targetPort: 8091
   selector:
     app: sboot
-  type: NodePort
+  type: LoadBalancer
 status:
   loadBalancer: {}
